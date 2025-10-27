@@ -1,8 +1,8 @@
 # 🌐 Instalación y Configuración del Servidor ISC-DHCP en Debian
 
-Este documento detalla la **instalación y configuración del servicio ISC-DHCP-SERVER** en un entorno de red virtualizado (VirtualBox), utilizando **Debian** como servidor y máquinas clientes con **Ubuntu Server** y **Windows 10**[cite: 19, 23, 184, 209].
+Este documento detalla la **instalación y configuración del servicio ISC-DHCP-SERVER** en un entorno de red virtualizado (VirtualBox), utilizando **Debian** como servidor y máquinas clientes con **Ubuntu Server** y **Windows 10**.
 
-La práctica incluye la gestión del servicio con `systemctl` (arranque, parada y monitorización) [cite: 19][cite_start], la configuración de clientes para la recepción de direcciones dinámicas, y el análisis del proceso de concesión y renovación de IP mediante captura de tráfico con `tcpdump`.
+La práctica incluye la gestión del servicio con `systemctl` (arranque, parada y monitorización) , la configuración de clientes para la recepción de direcciones dinámicas, y el análisis del proceso de concesión y renovación de IP mediante captura de tráfico con `tcpdump`.
 
 ***
 
