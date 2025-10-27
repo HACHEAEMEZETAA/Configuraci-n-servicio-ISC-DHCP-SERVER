@@ -39,18 +39,16 @@ La práctica incluye la gestión del servicio con `systemctl` (arranque, parada 
 | **Broadcast** | `option broadcast-address 10.15.0.255;` |
 | **Dominio Subred** | `option domain-name "hamzanetwork";` |
 
-### Interfaz de Escucha (`/etc/default/isc-dhcp-server`)
-
-```bash
 # Interfaz de escucha para IPv4.
-INTERFACESV4="enp0s8"
-## 🔄 Proceso de Concesión DHCP (DORA)
+INTERFACESv4="enp0s8"
+
+## Proceso de Concesión DHCP (DORA)
 
 El proceso de asignación de una IP (DORA) se compone de cuatro paquetes, capturados y analizados con `tcpdump`:
 
 | Paquete | Acrónimo | Función |
 | :--- | :--- | :--- |
-| **1. DHCP Discover** | **Discover** |El cliente envía un mensaje de difusión (*broadcast*) a la red para localizar servidores DHCP disponibles. |
-| **2. DHCP Offer** | **Offer** |El servidor responde ofreciendo una dirección IP y parámetros de configuración al cliente. |
-| **3. DHCP Request** | **Request** |El cliente solicita formalmente la dirección IP ofrecida, confirmando su elección. |
+| **1. DHCP Discover** | **Discover** | El cliente envía un mensaje de difusión (**broadcast**) a la red para localizar servidores DHCP. |
+| **2. DHCP Offer** | **Offer** | El servidor responde ofreciendo una dirección IP y parámetros de configuración al cliente. |
+| **3. DHCP Request** | **Request** | El cliente solicita formalmente la dirección IP ofrecida, confirmando su elección. |
 | **4. DHCP Acknowledge** | **ACK** | El servidor confirma la solicitud y asigna definitivamente la dirección IP al cliente. |
